@@ -27,15 +27,15 @@
       }
 
       setInterval(() => {
-        if(this.state.millisec_time === 99) { this.setState({ millisec_time: 0, second_time: this.state.second_time + 1 }) 
-          if(this.state.second_time === 59) this.setState({ second_time: 0, minute_time: this.state.minute_time + 1 }) 
+        if(this.state.millisec_time === 99) { this.setState({ millisec_time: 0, second_time: this.state.second_time + 1 })
+          if(this.state.second_time === 59) this.setState({ second_time: 0, minute_time: this.state.minute_time + 1 })
               if(this.state.minute_time === 59) this.setState({ minute_time: 0, hour_time: this.state.hour_time + 1 })
         } else this.setState({ millisec_time: this.state.millisec_time + 1 })
       }, 1)
 
       Timer = () => {
-        if(this.state.millisec === 99) { this.setState({ millisec: 0, second: this.state.second + 1 }) 
-          if(this.state.second === 59) this.setState({ second: 0, minute: this.state.minute + 1 }) 
+        if(this.state.millisec === 99) { this.setState({ millisec: 0, second: this.state.second + 1 })
+          if(this.state.second === 59) this.setState({ second: 0, minute: this.state.minute + 1 })
               if(this.state.minute === 59) this.setState({ minute: 0, hour: this.state.hour + 1 })
         } else this.setState({ millisec: this.state.millisec + 1 })
       }
@@ -77,7 +77,7 @@
     }
 
     _ASignASong = () => {
-      Speech.speak('พันหมื่นเหตุผล ที่บอกกับฉัน คือความผูกพันเธอนั้นไม่มีเหลืออยู่ พันหมื่นเหตุผล ที่เธอยืนยันให้รับรู้ ยิ่งฟังดูไม่ได้ความไม่มีค่าใด มีหนึ่งเหตุผล ยังปิดเอาไว้ คือเธอต้องการกันฉันให้พ้นทาง เพื่อให้เขาและเธอนั้นได้มารักกัน เหตุผลข้อเดียว คือข้อนั้น คือไม่รักกัน แค่นั้นเอง' , 
+      Speech.speak('พันหมื่นเหตุผล ที่บอกกับฉัน คือความผูกพันเธอนั้นไม่มีเหลืออยู่ พันหมื่นเหตุผล ที่เธอยืนยันให้รับรู้ ยิ่งฟังดูไม่ได้ความไม่มีค่าใด มีหนึ่งเหตุผล ยังปิดเอาไว้ คือเธอต้องการกันฉันให้พ้นทาง เพื่อให้เขาและเธอนั้นได้มารักกัน เหตุผลข้อเดียว คือข้อนั้น คือไม่รักกัน แค่นั้นเอง อิอิ' , 
       {
         language: 'th',
         rate: 0.5,
@@ -118,7 +118,7 @@
           />
 
           <Button onPress={this.HelloP_New} title='สวัสดีพี่นิวสุดโหด ^^'/>
-          
+
           <Text style={{ color: 'green', fontSize: 20, }}>Student แปลว่า นักเรียน</Text>
 
           <Button onPress={this._ReadVocabulary} title='คำอ่าน'/>
@@ -126,11 +126,11 @@
           <Button onPress={this._ASignASong} title='ร้องเพลง พันหมื่นเหตุผล'/>
           <Button onPress={this._StopASignASong} title='หยุดร้อง'/>
           <Button title="Open MeBank Website" onPress={this._handlePressButtonAsync} />
-          
+
 
         </View>
       );
-      
+
     }
   }
 
